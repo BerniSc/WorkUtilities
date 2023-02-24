@@ -6,6 +6,7 @@ For Processing the function ProcessData is used and has to be changed.
 
 Use example:
 
+```cpp
 void processData(files, filePaths) {
     vector<string> newFile;
     for(uint i = 0; i < files.size(); i++) {
@@ -26,7 +27,7 @@ void processData(files, filePaths) {
     }
     writeOutData(newFileName, newFile);
 }
-
+```
 -> searching all read-in files for lines with "bpo-" and larger than 5 characters
   -> if not check if line contains "Python" 
     -> if it does write line with '\t' in front of it in new File

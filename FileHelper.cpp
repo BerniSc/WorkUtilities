@@ -2,8 +2,10 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include <cstring>
-#include <filesystem>
+/***            Can be commented if errors occur           ***/
+#include <cstring>                          //Used for StrTok in seperateString
+#include <boost/algorithm/string.hpp>       //Used for to_upper_case in getUpperCase
+#include <filesystem>                       //Used for getting FilePaths using recursive_directory_iterator in getFilePaths
 
 using namespace std;
 namespace fs = std::filesystem;
@@ -78,6 +80,10 @@ vector<string> seperateString(string toSeperate, const char *seperator) {
 
 int getFirstOccurence(string largeString, string substring) {
     return largeString.find(substring);
+}
+
+string getUpperCase(string line) {
+    return boost::to_upper_copy<string>(line);
 }
 
 void processData(vector<vector<string>> files, const vector<string>& filePaths) {

@@ -29,9 +29,9 @@ void processData(files, filePaths) {
 }
 ```
 -> searching all read-in files for lines with "bpo-" and larger than 5 characters  
-  -> if not check if line contains "Python"   
-    -> if it does write line with '\t' in front of it in new File  
-    -> if it doesnt write normal line  
-  -> if it contains "bpo-" check if lines also contains "memory" or "leak", then write line with " ================== " in new file  
+&emsp;  -> if not check if line contains "Python"   
+&emsp;&emsp;    -> if it does write line with '\t' in front of it in new File  
+&emsp;&emsp;    -> if it doesnt write normal line  
+&emsp;  -> if it contains "bpo-" check if lines also contains "memory" or "leak", then write line with " ================== " in new file  
     
 Then finally print new File to real File in system with name_of_old_file.new   
